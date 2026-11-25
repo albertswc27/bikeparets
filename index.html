@@ -85,23 +85,6 @@
             z-index: 2;
         }
     </style>
-    <!-- Vercel Web Analytics (sin cookies) y clics de contacto: mismos nombres que el resto de webs de AstroLanding -->
-    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script>
-        document.addEventListener('click', function (e) {
-            var a = e.target.closest && e.target.closest('a[href]');
-            if (!a) return;
-            var h = a.getAttribute('href') || '';
-            var n = /^(https:\/\/(wa\.me|api\.whatsapp\.com)\/|whatsapp:)/i.test(h) ? 'whatsapp'
-                : /^tel:/i.test(h) ? 'telefono'
-                : /^mailto:/i.test(h) ? 'email'
-                : /^https:\/\/((www\.)?google\.[a-z.]+\/maps|maps\.google\.|maps\.app\.goo\.gl|goo\.gl\/maps|maps\.apple\.com)/i.test(h) ? 'como_llegar'
-                : '';
-            // window.va('event') es lo que llama track() de @vercel/analytics por dentro.
-            if (n) window.va('event', { name: n, data: { detalle: (a.getAttribute('aria-label') || a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80) } });
-        }, true);
-    </script>
 </head>
 <body class="bg-white">
     
